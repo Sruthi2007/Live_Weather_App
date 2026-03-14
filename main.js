@@ -5,7 +5,7 @@ function dateFormat(timestamp) {
 
 
         async function fetchAQIData(lat, lon) {
-            let fetchAQIData = await fetch(`http://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=d28274b5fe592e1f1e558103a5e66370`)
+            let fetchAQIData = await fetch(`https://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=d28274b5fe592e1f1e558103a5e66370`)
             let formattedData = await fetchAQIData.json();
             console.log('AQI Data: ', formattedData);
             let list = formattedData.list[0].components;
